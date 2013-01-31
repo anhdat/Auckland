@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A247E5416BADCC900D97EAF /* Auckland_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E4D16BADCC800D97EAF /* Auckland_icon.png */; };
+		1A247E5516BADCC900D97EAF /* Auckland_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E4E16BADCC800D97EAF /* Auckland_Logo.png */; };
+		1A247E5616BADCC900D97EAF /* Auckland_Change.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E4F16BADCC800D97EAF /* Auckland_Change.png */; };
+		1A247E5716BADCC900D97EAF /* Auckland_Love.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5016BADCC800D97EAF /* Auckland_Love.png */; };
+		1A247E5816BADCC900D97EAF /* Auckland_Next.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5116BADCC900D97EAF /* Auckland_Next.png */; };
+		1A247E5916BADCC900D97EAF /* Auckland_Previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5216BADCC900D97EAF /* Auckland_Previous.png */; };
+		1A247E5A16BADCC900D97EAF /* Auckland_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5316BADCC900D97EAF /* Auckland_Play.png */; };
 		1AF0860216B6B48600202C25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF0860116B6B48600202C25 /* Cocoa.framework */; };
 		1AF0860C16B6B48600202C25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0860A16B6B48600202C25 /* InfoPlist.strings */; };
 		1AF0860E16B6B48600202C25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0860D16B6B48600202C25 /* main.m */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A247E4D16BADCC800D97EAF /* Auckland_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_icon.png; sourceTree = "<group>"; };
+		1A247E4E16BADCC800D97EAF /* Auckland_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Logo.png; sourceTree = "<group>"; };
+		1A247E4F16BADCC800D97EAF /* Auckland_Change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Change.png; sourceTree = "<group>"; };
+		1A247E5016BADCC800D97EAF /* Auckland_Love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Love.png; sourceTree = "<group>"; };
+		1A247E5116BADCC900D97EAF /* Auckland_Next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Next.png; sourceTree = "<group>"; };
+		1A247E5216BADCC900D97EAF /* Auckland_Previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Previous.png; sourceTree = "<group>"; };
+		1A247E5316BADCC900D97EAF /* Auckland_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Play.png; sourceTree = "<group>"; };
 		1AF085FD16B6B48600202C25 /* Auckland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auckland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF0860116B6B48600202C25 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1AF0860416B6B48600202C25 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -43,6 +57,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A247E5C16BADCCC00D97EAF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				1A247E4D16BADCC800D97EAF /* Auckland_icon.png */,
+				1A247E4E16BADCC800D97EAF /* Auckland_Logo.png */,
+				1A247E4F16BADCC800D97EAF /* Auckland_Change.png */,
+				1A247E5016BADCC800D97EAF /* Auckland_Love.png */,
+				1A247E5116BADCC900D97EAF /* Auckland_Next.png */,
+				1A247E5216BADCC900D97EAF /* Auckland_Previous.png */,
+				1A247E5316BADCC900D97EAF /* Auckland_Play.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		1AF085F216B6B48600202C25 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +113,7 @@
 				1AF0861316B6B48600202C25 /* AppDelegate.h */,
 				1AF0861416B6B48600202C25 /* AppDelegate.m */,
 				1AF0861616B6B48700202C25 /* MainMenu.xib */,
+				1A247E5C16BADCCC00D97EAF /* Image */,
 				1AF0860816B6B48600202C25 /* Supporting Files */,
 			);
 			path = Auckland;
@@ -156,6 +185,13 @@
 				1AF0860C16B6B48600202C25 /* InfoPlist.strings in Resources */,
 				1AF0861216B6B48600202C25 /* Credits.rtf in Resources */,
 				1AF0861816B6B48700202C25 /* MainMenu.xib in Resources */,
+				1A247E5416BADCC900D97EAF /* Auckland_icon.png in Resources */,
+				1A247E5516BADCC900D97EAF /* Auckland_Logo.png in Resources */,
+				1A247E5616BADCC900D97EAF /* Auckland_Change.png in Resources */,
+				1A247E5716BADCC900D97EAF /* Auckland_Love.png in Resources */,
+				1A247E5816BADCC900D97EAF /* Auckland_Next.png in Resources */,
+				1A247E5916BADCC900D97EAF /* Auckland_Previous.png in Resources */,
+				1A247E5A16BADCC900D97EAF /* Auckland_Play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +333,7 @@
 				1AF0861D16B6B48700202C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
