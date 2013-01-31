@@ -7,18 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A247E3A16BAD1C900D97EAF /* iTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A247E3916BAD1C900D97EAF /* iTunesController.m */; };
-		1A247E3C16BAD2F700D97EAF /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A247E3B16BAD2F700D97EAF /* ScriptingBridge.framework */; };
-		1A27819816B81CAF002D6CCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A27819716B81CAF002D6CCB /* QuartzCore.framework */; };
-		1A2781B316B83830002D6CCB /* Auckland_Change.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2781AE16B83830002D6CCB /* Auckland_Change.png */; };
-		1A2781B416B83830002D6CCB /* Auckland_Love.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2781AF16B83830002D6CCB /* Auckland_Love.png */; };
-		1A2781B516B83830002D6CCB /* Auckland_Next.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2781B016B83830002D6CCB /* Auckland_Next.png */; };
-		1A2781B616B83830002D6CCB /* Auckland_Previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2781B116B83830002D6CCB /* Auckland_Previous.png */; };
-		1A2781B916B83860002D6CCB /* Auckland_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2781B816B83860002D6CCB /* Auckland_Play.png */; };
-		1A2781BB16B838BA002D6CCB /* Auckland_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2781BA16B838BA002D6CCB /* Auckland_Logo.png */; };
-		1A2781BD16B83A5D002D6CCB /* Auckland_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2781BC16B83A5D002D6CCB /* Auckland_icon.png */; };
-		1A2B35C216BAC04E006BD23A /* iTunesControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B35C116BAC04E006BD23A /* iTunesControl.m */; };
-		1A2B35EC16BACC0E006BD23A /* ImageScaler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B35EB16BACC0E006BD23A /* ImageScaler.m */; };
 		1AF0860216B6B48600202C25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF0860116B6B48600202C25 /* Cocoa.framework */; };
 		1AF0860C16B6B48600202C25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0860A16B6B48600202C25 /* InfoPlist.strings */; };
 		1AF0860E16B6B48600202C25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0860D16B6B48600202C25 /* main.m */; };
@@ -28,22 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A247E3716BAD1C900D97EAF /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
-		1A247E3816BAD1C900D97EAF /* iTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesController.h; sourceTree = "<group>"; };
-		1A247E3916BAD1C900D97EAF /* iTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesController.m; sourceTree = "<group>"; };
-		1A247E3B16BAD2F700D97EAF /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
-		1A27819716B81CAF002D6CCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		1A2781AE16B83830002D6CCB /* Auckland_Change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Change.png; sourceTree = "<group>"; };
-		1A2781AF16B83830002D6CCB /* Auckland_Love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Love.png; sourceTree = "<group>"; };
-		1A2781B016B83830002D6CCB /* Auckland_Next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Next.png; sourceTree = "<group>"; };
-		1A2781B116B83830002D6CCB /* Auckland_Previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Previous.png; sourceTree = "<group>"; };
-		1A2781B816B83860002D6CCB /* Auckland_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Play.png; sourceTree = "<group>"; };
-		1A2781BA16B838BA002D6CCB /* Auckland_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Logo.png; sourceTree = "<group>"; };
-		1A2781BC16B83A5D002D6CCB /* Auckland_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_icon.png; sourceTree = "<group>"; };
-		1A2B35C016BAC04E006BD23A /* iTunesControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesControl.h; sourceTree = "<group>"; };
-		1A2B35C116BAC04E006BD23A /* iTunesControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesControl.m; sourceTree = "<group>"; };
-		1A2B35EA16BACC0D006BD23A /* ImageScaler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScaler.h; sourceTree = "<group>"; };
-		1A2B35EB16BACC0E006BD23A /* ImageScaler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScaler.m; sourceTree = "<group>"; };
 		1AF085FD16B6B48600202C25 /* Auckland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auckland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF0860116B6B48600202C25 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1AF0860416B6B48600202C25 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -64,8 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A247E3C16BAD2F700D97EAF /* ScriptingBridge.framework in Frameworks */,
-				1A27819816B81CAF002D6CCB /* QuartzCore.framework in Frameworks */,
 				1AF0860216B6B48600202C25 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,8 +46,6 @@
 		1AF085F216B6B48600202C25 = {
 			isa = PBXGroup;
 			children = (
-				1A247E3B16BAD2F700D97EAF /* ScriptingBridge.framework */,
-				1A27819716B81CAF002D6CCB /* QuartzCore.framework */,
 				1AF0860716B6B48600202C25 /* Auckland */,
 				1AF0860016B6B48600202C25 /* Frameworks */,
 				1AF085FE16B6B48600202C25 /* Products */,
@@ -117,15 +85,7 @@
 				1AF0861316B6B48600202C25 /* AppDelegate.h */,
 				1AF0861416B6B48600202C25 /* AppDelegate.m */,
 				1AF0861616B6B48700202C25 /* MainMenu.xib */,
-				1A2B35EA16BACC0D006BD23A /* ImageScaler.h */,
-				1A2B35EB16BACC0E006BD23A /* ImageScaler.m */,
-				1A247E3716BAD1C900D97EAF /* iTunes.h */,
-				1A247E3816BAD1C900D97EAF /* iTunesController.h */,
-				1A247E3916BAD1C900D97EAF /* iTunesController.m */,
-				1AF0863016B6B4E300202C25 /* Image */,
 				1AF0860816B6B48600202C25 /* Supporting Files */,
-				1A2B35C016BAC04E006BD23A /* iTunesControl.h */,
-				1A2B35C116BAC04E006BD23A /* iTunesControl.m */,
 			);
 			path = Auckland;
 			sourceTree = "<group>";
@@ -140,20 +100,6 @@
 				1AF0861016B6B48600202C25 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1AF0863016B6B4E300202C25 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				1A2781AE16B83830002D6CCB /* Auckland_Change.png */,
-				1A2781AF16B83830002D6CCB /* Auckland_Love.png */,
-				1A2781B016B83830002D6CCB /* Auckland_Next.png */,
-				1A2781B116B83830002D6CCB /* Auckland_Previous.png */,
-				1A2781B816B83860002D6CCB /* Auckland_Play.png */,
-				1A2781BC16B83A5D002D6CCB /* Auckland_icon.png */,
-				1A2781BA16B838BA002D6CCB /* Auckland_Logo.png */,
-			);
-			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,13 +156,6 @@
 				1AF0860C16B6B48600202C25 /* InfoPlist.strings in Resources */,
 				1AF0861216B6B48600202C25 /* Credits.rtf in Resources */,
 				1AF0861816B6B48700202C25 /* MainMenu.xib in Resources */,
-				1A2781B316B83830002D6CCB /* Auckland_Change.png in Resources */,
-				1A2781B416B83830002D6CCB /* Auckland_Love.png in Resources */,
-				1A2781B516B83830002D6CCB /* Auckland_Next.png in Resources */,
-				1A2781B616B83830002D6CCB /* Auckland_Previous.png in Resources */,
-				1A2781B916B83860002D6CCB /* Auckland_Play.png in Resources */,
-				1A2781BB16B838BA002D6CCB /* Auckland_Logo.png in Resources */,
-				1A2781BD16B83A5D002D6CCB /* Auckland_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,9 +168,6 @@
 			files = (
 				1AF0860E16B6B48600202C25 /* main.m in Sources */,
 				1AF0861516B6B48600202C25 /* AppDelegate.m in Sources */,
-				1A2B35C216BAC04E006BD23A /* iTunesControl.m in Sources */,
-				1A2B35EC16BACC0E006BD23A /* ImageScaler.m in Sources */,
-				1A247E3A16BAD1C900D97EAF /* iTunesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,10 +258,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Auckland/Auckland-Prefix.pch";
 				INFOPLIST_FILE = "Auckland/Auckland-Info.plist";
@@ -338,10 +270,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Auckland/Auckland-Prefix.pch";
 				INFOPLIST_FILE = "Auckland/Auckland-Info.plist";
@@ -369,7 +297,6 @@
 				1AF0861D16B6B48700202C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
