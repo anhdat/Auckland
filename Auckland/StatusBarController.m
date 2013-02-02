@@ -16,6 +16,17 @@
 
 @implementation StatusBarController
 
+
+// key values for dictionary in NSTrackingAreas's userInfo
+enum {
+	controller = 1,		// controller tracking area 
+	title			// title tracking area 
+};
+// key for dictionary in NSTrackingAreas's userInfo
+NSString* kTrackerKey = @"keyOfTracker";
+
+
+
 - (id)init
 {
     if ((self = [super init]))
@@ -57,13 +68,24 @@
 #pragma mark -
 #pragma mark Updating UI
 
+
 - (void)addStatusItems
 {
     if (!controllerItem)
 	{
-		controllerItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+		controllerItem = [[NSStatusBar systemStatusBar] statusItemWithLength:100];
         [controllerItem setImage:nil];
-		[controllerItem setView:self.statusView];
+        
+        trackingOptions =
+        NSTrackingEnabledDuringMouseDrag | NSTrackingMouseEnteredAndExited |
+        NSTrackingActiveAlways;
+		
+        
+        [self addTrackArea:controllerTrackingArea withValue:controller withKey:kTrackerKey toView:self.statusView];
+        [self addTrackArea:titleTrackingArea withValue:title withKey:kTrackerKey toView:self.titleView];
+        
+        
+		[controllerItem setView:self.titleView];
 		[self updatePlayButtonState];
 	}
     
@@ -114,11 +136,49 @@
 	}	
 }
 
+// -------------------------------------------------------------------------------
+//	mouseEntered:event
+// -------------------------------------------------------------------------------
+//	Because we installed NSTrackingArea with "NSTrackingMouseEnteredAndExited"
+//	as an option, this method will be called.
+// -------------------------------------------------------------------------------
+- (void)mouseEntered:(NSEvent*)event
+{
+//    NSLog(@"userData %@", [event userData]);
+//	NSLog(@"in");
+    [controllerItem setView:self.statusView];
+}
+
+// -------------------------------------------------------------------------------
+//	mouseExited:event
+// -------------------------------------------------------------------------------
+//	Because we installed NSTrackingArea with "NSTrackingMouseEnteredAndExited",
+//	as an option, this method will be called.
+// -------------------------------------------------------------------------------
+- (void)mouseExited:(NSEvent*)event
+{
+//    NSLog(@"userData %@", [event userData]);
+//	NSLog(@"out");
+    [controllerItem setView:self.titleView];
+}
 
 - (void)updatePlayButtonState
 {
 	NSImage *playButtonImage = [NSImage imageNamed:[[iTunesController sharedInstance] isPlaying] ? @"Auckland_Pause" : @"Auckland_Play"];
 	[self.playButton setImage:playButtonImage];
 }
+
+- (void)addTrackArea:(NSTrackingArea*) trackArea withValue:(int) trackValue withKey:(NSString*) trackKey toView: (StatusView*) desView
+{
+    NSDictionary* trackerData2 = [NSDictionary dictionaryWithObjectsAndKeys:
+                                  [NSNumber numberWithInt: trackValue], trackKey, nil];
+    trackArea = [[NSTrackingArea alloc]
+                 initWithRect: [desView bounds]
+                 options: trackingOptions
+                 owner: self
+                 userInfo: trackerData2];
+    [desView addTrackingArea: trackArea];
+}
+
 
 @end

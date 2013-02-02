@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A247E5416BADCC900D97EAF /* Auckland_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E4D16BADCC800D97EAF /* Auckland_icon.png */; };
-		1A247E5516BADCC900D97EAF /* Auckland_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E4E16BADCC800D97EAF /* Auckland_Logo.png */; };
-		1A247E5616BADCC900D97EAF /* Auckland_Change.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E4F16BADCC800D97EAF /* Auckland_Change.png */; };
-		1A247E5716BADCC900D97EAF /* Auckland_Love.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5016BADCC800D97EAF /* Auckland_Love.png */; };
-		1A247E5816BADCC900D97EAF /* Auckland_Next.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5116BADCC900D97EAF /* Auckland_Next.png */; };
-		1A247E5916BADCC900D97EAF /* Auckland_Previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5216BADCC900D97EAF /* Auckland_Previous.png */; };
-		1A247E5A16BADCC900D97EAF /* Auckland_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5316BADCC900D97EAF /* Auckland_Play.png */; };
 		1A247E6016BADFAB00D97EAF /* iTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A247E5F16BADFAB00D97EAF /* iTunesController.m */; };
+		1A2E8A9016BD7F700038043C /* Auckland_Pause_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8316BD7F700038043C /* Auckland_Pause_alt.png */; };
+		1A2E8A9116BD7F700038043C /* Auckland_Change_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8416BD7F700038043C /* Auckland_Change_alt.png */; };
+		1A2E8A9216BD7F700038043C /* Auckland_Love_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8516BD7F700038043C /* Auckland_Love_alt.png */; };
+		1A2E8A9316BD7F700038043C /* Auckland_Next_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8616BD7F700038043C /* Auckland_Next_alt.png */; };
+		1A2E8A9416BD7F700038043C /* Auckland_Play_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8716BD7F700038043C /* Auckland_Play_alt.png */; };
+		1A2E8A9516BD7F700038043C /* Auckland_Previous_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8816BD7F700038043C /* Auckland_Previous_alt.png */; };
+		1A2E8A9616BD7F700038043C /* Auckland_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8916BD7F700038043C /* Auckland_Play.png */; };
+		1A2E8A9716BD7F700038043C /* Auckland_Previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8A16BD7F700038043C /* Auckland_Previous.png */; };
+		1A2E8A9816BD7F700038043C /* Auckland_Change.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8B16BD7F700038043C /* Auckland_Change.png */; };
+		1A2E8A9916BD7F700038043C /* Auckland_Love.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8C16BD7F700038043C /* Auckland_Love.png */; };
+		1A2E8A9A16BD7F700038043C /* Auckland_Next.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8D16BD7F700038043C /* Auckland_Next.png */; };
+		1A2E8A9B16BD7F700038043C /* Auckland_Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8E16BD7F700038043C /* Auckland_Pause.png */; };
+		1A2E8A9C16BD7F700038043C /* Auckland_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8F16BD7F700038043C /* Auckland_Logo.png */; };
 		1AE7D6A516BC1343003EB2C5 /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */; };
 		1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A916BC1626003EB2C5 /* StatusView.m */; };
 		1AE7D6AC16BC168E003EB2C5 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */; };
@@ -27,16 +33,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A247E4D16BADCC800D97EAF /* Auckland_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_icon.png; sourceTree = "<group>"; };
-		1A247E4E16BADCC800D97EAF /* Auckland_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Logo.png; sourceTree = "<group>"; };
-		1A247E4F16BADCC800D97EAF /* Auckland_Change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Change.png; sourceTree = "<group>"; };
-		1A247E5016BADCC800D97EAF /* Auckland_Love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Love.png; sourceTree = "<group>"; };
-		1A247E5116BADCC900D97EAF /* Auckland_Next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Next.png; sourceTree = "<group>"; };
-		1A247E5216BADCC900D97EAF /* Auckland_Previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Previous.png; sourceTree = "<group>"; };
-		1A247E5316BADCC900D97EAF /* Auckland_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Play.png; sourceTree = "<group>"; };
 		1A247E5D16BADFAB00D97EAF /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		1A247E5E16BADFAB00D97EAF /* iTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesController.h; sourceTree = "<group>"; };
 		1A247E5F16BADFAB00D97EAF /* iTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesController.m; sourceTree = "<group>"; };
+		1A2E8A8316BD7F700038043C /* Auckland_Pause_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Pause_alt.png; sourceTree = "<group>"; };
+		1A2E8A8416BD7F700038043C /* Auckland_Change_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Change_alt.png; sourceTree = "<group>"; };
+		1A2E8A8516BD7F700038043C /* Auckland_Love_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Love_alt.png; sourceTree = "<group>"; };
+		1A2E8A8616BD7F700038043C /* Auckland_Next_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Next_alt.png; sourceTree = "<group>"; };
+		1A2E8A8716BD7F700038043C /* Auckland_Play_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Play_alt.png; sourceTree = "<group>"; };
+		1A2E8A8816BD7F700038043C /* Auckland_Previous_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Previous_alt.png; sourceTree = "<group>"; };
+		1A2E8A8916BD7F700038043C /* Auckland_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Play.png; sourceTree = "<group>"; };
+		1A2E8A8A16BD7F700038043C /* Auckland_Previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Previous.png; sourceTree = "<group>"; };
+		1A2E8A8B16BD7F700038043C /* Auckland_Change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Change.png; sourceTree = "<group>"; };
+		1A2E8A8C16BD7F700038043C /* Auckland_Love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Love.png; sourceTree = "<group>"; };
+		1A2E8A8D16BD7F700038043C /* Auckland_Next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Next.png; sourceTree = "<group>"; };
+		1A2E8A8E16BD7F700038043C /* Auckland_Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Pause.png; sourceTree = "<group>"; };
+		1A2E8A8F16BD7F700038043C /* Auckland_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Logo.png; sourceTree = "<group>"; };
 		1AE7D6A316BC1343003EB2C5 /* StatusBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
 		1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
 		1AE7D6A816BC1626003EB2C5 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
@@ -73,13 +85,19 @@
 		1A247E5C16BADCCC00D97EAF /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				1A247E4D16BADCC800D97EAF /* Auckland_icon.png */,
-				1A247E4E16BADCC800D97EAF /* Auckland_Logo.png */,
-				1A247E4F16BADCC800D97EAF /* Auckland_Change.png */,
-				1A247E5016BADCC800D97EAF /* Auckland_Love.png */,
-				1A247E5116BADCC900D97EAF /* Auckland_Next.png */,
-				1A247E5216BADCC900D97EAF /* Auckland_Previous.png */,
-				1A247E5316BADCC900D97EAF /* Auckland_Play.png */,
+				1A2E8A8316BD7F700038043C /* Auckland_Pause_alt.png */,
+				1A2E8A8416BD7F700038043C /* Auckland_Change_alt.png */,
+				1A2E8A8516BD7F700038043C /* Auckland_Love_alt.png */,
+				1A2E8A8616BD7F700038043C /* Auckland_Next_alt.png */,
+				1A2E8A8716BD7F700038043C /* Auckland_Play_alt.png */,
+				1A2E8A8816BD7F700038043C /* Auckland_Previous_alt.png */,
+				1A2E8A8916BD7F700038043C /* Auckland_Play.png */,
+				1A2E8A8A16BD7F700038043C /* Auckland_Previous.png */,
+				1A2E8A8B16BD7F700038043C /* Auckland_Change.png */,
+				1A2E8A8C16BD7F700038043C /* Auckland_Love.png */,
+				1A2E8A8D16BD7F700038043C /* Auckland_Next.png */,
+				1A2E8A8E16BD7F700038043C /* Auckland_Pause.png */,
+				1A2E8A8F16BD7F700038043C /* Auckland_Logo.png */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -222,13 +240,19 @@
 				1AF0860C16B6B48600202C25 /* InfoPlist.strings in Resources */,
 				1AF0861216B6B48600202C25 /* Credits.rtf in Resources */,
 				1AF0861816B6B48700202C25 /* MainMenu.xib in Resources */,
-				1A247E5416BADCC900D97EAF /* Auckland_icon.png in Resources */,
-				1A247E5516BADCC900D97EAF /* Auckland_Logo.png in Resources */,
-				1A247E5616BADCC900D97EAF /* Auckland_Change.png in Resources */,
-				1A247E5716BADCC900D97EAF /* Auckland_Love.png in Resources */,
-				1A247E5816BADCC900D97EAF /* Auckland_Next.png in Resources */,
-				1A247E5916BADCC900D97EAF /* Auckland_Previous.png in Resources */,
-				1A247E5A16BADCC900D97EAF /* Auckland_Play.png in Resources */,
+				1A2E8A9016BD7F700038043C /* Auckland_Pause_alt.png in Resources */,
+				1A2E8A9116BD7F700038043C /* Auckland_Change_alt.png in Resources */,
+				1A2E8A9216BD7F700038043C /* Auckland_Love_alt.png in Resources */,
+				1A2E8A9316BD7F700038043C /* Auckland_Next_alt.png in Resources */,
+				1A2E8A9416BD7F700038043C /* Auckland_Play_alt.png in Resources */,
+				1A2E8A9516BD7F700038043C /* Auckland_Previous_alt.png in Resources */,
+				1A2E8A9616BD7F700038043C /* Auckland_Play.png in Resources */,
+				1A2E8A9716BD7F700038043C /* Auckland_Previous.png in Resources */,
+				1A2E8A9816BD7F700038043C /* Auckland_Change.png in Resources */,
+				1A2E8A9916BD7F700038043C /* Auckland_Love.png in Resources */,
+				1A2E8A9A16BD7F700038043C /* Auckland_Next.png in Resources */,
+				1A2E8A9B16BD7F700038043C /* Auckland_Pause.png in Resources */,
+				1A2E8A9C16BD7F700038043C /* Auckland_Logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
