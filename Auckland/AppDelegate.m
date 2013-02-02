@@ -7,12 +7,65 @@
 //
 
 #import "AppDelegate.h"
+//#import "PreferencesWindowController.h"
+#import "StatusView.h"
+#import "StatusBarController.h"
+
+@interface AppDelegate()
+
+
+@end
+
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    
+    //hide dock icon
+//    [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
+    [NSApp setActivationPolicy: NSApplicationActivationPolicyProhibited];
+
+    
+    srand((unsigned int)time(NULL));
+    
+	[[iTunesController sharedInstance] setDelegate:self];
+	
+	[self.statusBarController addStatusItems];
+
+}
+
+
+#pragma mark -
+#pragma mark iTunesController Delegate
+
+- (void)iTunesController:(iTunesController *)tunesController trackDidChange:(iTunesTrack *)newTrack
+{
+	[self.statusBarController updatePlayButtonState];
+	
+    // Do not show notification window
+	if (newTrack == nil)
+		return;
+	
+	if ([[iTunesController sharedInstance] isPlaying])
+	{
+		
+	}
+	else
+	{
+	}
+}
+
+
+
+#pragma mark -
+#pragma mark Managing Windows
+
+- (void)showAboutPanel
+{
+	[NSApp orderFrontStandardAboutPanel:self];
+	[NSApp activateIgnoringOtherApps:YES];
 }
 
 @end

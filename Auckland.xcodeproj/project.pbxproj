@@ -15,6 +15,9 @@
 		1A247E5916BADCC900D97EAF /* Auckland_Previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5216BADCC900D97EAF /* Auckland_Previous.png */; };
 		1A247E5A16BADCC900D97EAF /* Auckland_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A247E5316BADCC900D97EAF /* Auckland_Play.png */; };
 		1A247E6016BADFAB00D97EAF /* iTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A247E5F16BADFAB00D97EAF /* iTunesController.m */; };
+		1AE7D6A516BC1343003EB2C5 /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */; };
+		1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A916BC1626003EB2C5 /* StatusView.m */; };
+		1AE7D6AC16BC168E003EB2C5 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */; };
 		1AF0860216B6B48600202C25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF0860116B6B48600202C25 /* Cocoa.framework */; };
 		1AF0860C16B6B48600202C25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0860A16B6B48600202C25 /* InfoPlist.strings */; };
 		1AF0860E16B6B48600202C25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0860D16B6B48600202C25 /* main.m */; };
@@ -34,6 +37,11 @@
 		1A247E5D16BADFAB00D97EAF /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		1A247E5E16BADFAB00D97EAF /* iTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesController.h; sourceTree = "<group>"; };
 		1A247E5F16BADFAB00D97EAF /* iTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesController.m; sourceTree = "<group>"; };
+		1AE7D6A316BC1343003EB2C5 /* StatusBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
+		1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
+		1AE7D6A816BC1626003EB2C5 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
+		1AE7D6A916BC1626003EB2C5 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
+		1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		1AF085FD16B6B48600202C25 /* Auckland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auckland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF0860116B6B48600202C25 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1AF0860416B6B48600202C25 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE7D6AC16BC168E003EB2C5 /* ScriptingBridge.framework in Frameworks */,
 				1AF0860216B6B48600202C25 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,9 +94,21 @@
 			name = General;
 			sourceTree = "<group>";
 		};
+		1AE7D6A716BC1348003EB2C5 /* Status Item */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7D6A316BC1343003EB2C5 /* StatusBarController.h */,
+				1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */,
+				1AE7D6A816BC1626003EB2C5 /* StatusView.h */,
+				1AE7D6A916BC1626003EB2C5 /* StatusView.m */,
+			);
+			name = "Status Item";
+			sourceTree = "<group>";
+		};
 		1AF085F216B6B48600202C25 = {
 			isa = PBXGroup;
 			children = (
+				1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */,
 				1AF0860716B6B48600202C25 /* Auckland */,
 				1AF0860016B6B48600202C25 /* Frameworks */,
 				1AF085FE16B6B48600202C25 /* Products */,
@@ -127,6 +148,7 @@
 				1AF0861316B6B48600202C25 /* AppDelegate.h */,
 				1AF0861416B6B48600202C25 /* AppDelegate.m */,
 				1AF0861616B6B48700202C25 /* MainMenu.xib */,
+				1AE7D6A716BC1348003EB2C5 /* Status Item */,
 				1A247E6116BADFB000D97EAF /* General */,
 				1A247E5C16BADCCC00D97EAF /* Image */,
 				1AF0860816B6B48600202C25 /* Supporting Files */,
@@ -220,6 +242,8 @@
 				1AF0860E16B6B48600202C25 /* main.m in Sources */,
 				1AF0861516B6B48600202C25 /* AppDelegate.m in Sources */,
 				1A247E6016BADFAB00D97EAF /* iTunesController.m in Sources */,
+				1AE7D6A516BC1343003EB2C5 /* StatusBarController.m in Sources */,
+				1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
