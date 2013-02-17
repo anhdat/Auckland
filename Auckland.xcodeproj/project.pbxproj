@@ -20,6 +20,9 @@
 		1A2E8A9A16BD7F700038043C /* Auckland_Next.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8D16BD7F700038043C /* Auckland_Next.png */; };
 		1A2E8A9B16BD7F700038043C /* Auckland_Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8E16BD7F700038043C /* Auckland_Pause.png */; };
 		1A2E8A9C16BD7F700038043C /* Auckland_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8F16BD7F700038043C /* Auckland_Logo.png */; };
+		1A9338A616D1360700D93204 /* ADPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338A516D1360700D93204 /* ADPlayer.m */; };
+		1A9338A916D1376F00D93204 /* ControllerStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338A816D1376F00D93204 /* ControllerStatusBar.m */; };
+		1A9338AC16D13B7100D93204 /* IconStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338AB16D13B7100D93204 /* IconStatusBar.m */; };
 		1AE7D6A516BC1343003EB2C5 /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */; };
 		1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A916BC1626003EB2C5 /* StatusView.m */; };
 		1AE7D6AC16BC168E003EB2C5 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */; };
@@ -29,7 +32,6 @@
 		1AF0861216B6B48600202C25 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0861016B6B48600202C25 /* Credits.rtf */; };
 		1AF0861516B6B48600202C25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0861416B6B48600202C25 /* AppDelegate.m */; };
 		1AF0861816B6B48700202C25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0861616B6B48700202C25 /* MainMenu.xib */; };
-		DCD3D03E16C7EDA800F2DCBE /* PBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3D03D16C7EDA800F2DCBE /* PBPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,12 @@
 		1A2E8A8D16BD7F700038043C /* Auckland_Next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Next.png; sourceTree = "<group>"; };
 		1A2E8A8E16BD7F700038043C /* Auckland_Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Pause.png; sourceTree = "<group>"; };
 		1A2E8A8F16BD7F700038043C /* Auckland_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Logo.png; sourceTree = "<group>"; };
+		1A9338A416D1360700D93204 /* ADPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPlayer.h; sourceTree = "<group>"; };
+		1A9338A516D1360700D93204 /* ADPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPlayer.m; sourceTree = "<group>"; };
+		1A9338A716D1376F00D93204 /* ControllerStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerStatusBar.h; sourceTree = "<group>"; };
+		1A9338A816D1376F00D93204 /* ControllerStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerStatusBar.m; sourceTree = "<group>"; };
+		1A9338AA16D13B7100D93204 /* IconStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconStatusBar.h; sourceTree = "<group>"; };
+		1A9338AB16D13B7100D93204 /* IconStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconStatusBar.m; sourceTree = "<group>"; };
 		1AE7D6A316BC1343003EB2C5 /* StatusBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
 		1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
 		1AE7D6A816BC1626003EB2C5 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
@@ -64,8 +72,6 @@
 		1AF0861316B6B48600202C25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AF0861416B6B48600202C25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AF0861716B6B48700202C25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		DCD3D03C16C7EDA800F2DCBE /* PBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlayer.h; sourceTree = "<group>"; };
-		DCD3D03D16C7EDA800F2DCBE /* PBPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +110,8 @@
 		1A247E6116BADFB000D97EAF /* General */ = {
 			isa = PBXGroup;
 			children = (
-				DCD3D03C16C7EDA800F2DCBE /* PBPlayer.h */,
-				DCD3D03D16C7EDA800F2DCBE /* PBPlayer.m */,
+				1A9338A416D1360700D93204 /* ADPlayer.h */,
+				1A9338A516D1360700D93204 /* ADPlayer.m */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -117,6 +123,10 @@
 				1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */,
 				1AE7D6A816BC1626003EB2C5 /* StatusView.h */,
 				1AE7D6A916BC1626003EB2C5 /* StatusView.m */,
+				1A9338A716D1376F00D93204 /* ControllerStatusBar.h */,
+				1A9338A816D1376F00D93204 /* ControllerStatusBar.m */,
+				1A9338AA16D13B7100D93204 /* IconStatusBar.h */,
+				1A9338AB16D13B7100D93204 /* IconStatusBar.m */,
 			);
 			name = "Status Item";
 			sourceTree = "<group>";
@@ -265,7 +275,9 @@
 				1AF0861516B6B48600202C25 /* AppDelegate.m in Sources */,
 				1AE7D6A516BC1343003EB2C5 /* StatusBarController.m in Sources */,
 				1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */,
-				DCD3D03E16C7EDA800F2DCBE /* PBPlayer.m in Sources */,
+				1A9338A616D1360700D93204 /* ADPlayer.m in Sources */,
+				1A9338A916D1376F00D93204 /* ControllerStatusBar.m in Sources */,
+				1A9338AC16D13B7100D93204 /* IconStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
 		<string key="IBDocument.SystemVersion">12C60</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
+		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">2844</string>
+			<string key="NS.object.0">3084</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBNSLayoutConstraint</string>
@@ -38,8 +38,11 @@
 			<object class="NSCustomObject" id="1050">
 				<string key="NSClassName">NSApplication</string>
 			</object>
-			<object class="NSCustomObject" id="711164544">
-				<string key="NSClassName">StatusBarController</string>
+			<object class="NSCustomObject" id="978110300">
+				<string key="NSClassName">ControllerStatusBar</string>
+			</object>
+			<object class="NSCustomObject" id="138247745">
+				<string key="NSClassName">IconStatusBar</string>
 			</object>
 			<object class="NSMenu" id="649796088">
 				<string key="NSTitle">AMainMenu</string>
@@ -1483,7 +1486,7 @@
 					<object class="NSTextField" id="844277852">
 						<reference key="NSNextResponder" ref="325280486"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrameSize">{110, 22}</string>
+						<string key="NSFrame">{{0, -3}, {110, 22}}</string>
 						<reference key="NSSuperview" ref="325280486"/>
 						<string key="NSReuseIdentifierKey">_NS:1535</string>
 						<bool key="NSEnabled">YES</bool>
@@ -2317,75 +2320,91 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">statusBarController</string>
+						<string key="label">controllerS</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="711164544"/>
+						<reference key="destination" ref="978110300"/>
 					</object>
-					<int key="connectionID">704</int>
+					<int key="connectionID">805</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">iconS</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="138247745"/>
+					</object>
+					<int key="connectionID">808</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">playPrevious:</string>
-						<reference key="source" ref="711164544"/>
+						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="794546589"/>
 					</object>
-					<int key="connectionID">699</int>
+					<int key="connectionID">809</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">playPause</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="1022079067"/>
+					</object>
+					<int key="connectionID">810</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">playPause:</string>
-						<reference key="source" ref="711164544"/>
+						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="1022079067"/>
 					</object>
-					<int key="connectionID">700</int>
+					<int key="connectionID">811</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">playNext:</string>
-						<reference key="source" ref="711164544"/>
+						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="346205550"/>
 					</object>
-					<int key="connectionID">701</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">playButton</string>
-						<reference key="source" ref="711164544"/>
-						<reference key="destination" ref="1022079067"/>
-					</object>
-					<int key="connectionID">702</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">statusView</string>
-						<reference key="source" ref="711164544"/>
-						<reference key="destination" ref="960993340"/>
-					</object>
-					<int key="connectionID">703</int>
+					<int key="connectionID">812</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">titleView</string>
-						<reference key="source" ref="711164544"/>
+						<reference key="source" ref="978110300"/>
 						<reference key="destination" ref="325280486"/>
 					</object>
-					<int key="connectionID">737</int>
+					<int key="connectionID">800</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">displayText</string>
-						<reference key="source" ref="711164544"/>
-						<reference key="destination" ref="528347938"/>
+						<string key="label">actionView</string>
+						<reference key="source" ref="978110300"/>
+						<reference key="destination" ref="960993340"/>
 					</object>
-					<int key="connectionID">794</int>
+					<int key="connectionID">801</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">playButton</string>
+						<reference key="source" ref="978110300"/>
+						<reference key="destination" ref="1022079067"/>
+					</object>
+					<int key="connectionID">802</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">displayTextView</string>
-						<reference key="source" ref="711164544"/>
+						<reference key="source" ref="978110300"/>
 						<reference key="destination" ref="844277852"/>
 					</object>
-					<int key="connectionID">795</int>
+					<int key="connectionID">803</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">displayText</string>
+						<reference key="source" ref="978110300"/>
+						<reference key="destination" ref="528347938"/>
+					</object>
+					<int key="connectionID">804</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3615,6 +3634,22 @@
 						<reference key="object" ref="325280486"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="844277852"/>
+							<object class="IBNSLayoutConstraint" id="734361697">
+								<reference key="firstItem" ref="844277852"/>
+								<int key="firstAttribute">3</int>
+								<int key="relation">0</int>
+								<reference key="secondItem" ref="325280486"/>
+								<int key="secondAttribute">3</int>
+								<float key="multiplier">1</float>
+								<object class="IBLayoutConstant" key="constant">
+									<double key="value">3</double>
+								</object>
+								<float key="priority">1000</float>
+								<reference key="containingView" ref="325280486"/>
+								<int key="scoringType">3</int>
+								<float key="scoringTypeFloat">9</float>
+								<int key="contentType">3</int>
+							</object>
 							<object class="IBNSLayoutConstraint" id="314512061">
 								<reference key="firstItem" ref="844277852"/>
 								<int key="firstAttribute">5</int>
@@ -3629,22 +3664,6 @@
 								<reference key="containingView" ref="325280486"/>
 								<int key="scoringType">3</int>
 								<float key="scoringTypeFloat">9</float>
-								<int key="contentType">3</int>
-							</object>
-							<object class="IBNSLayoutConstraint" id="355559523">
-								<reference key="firstItem" ref="844277852"/>
-								<int key="firstAttribute">3</int>
-								<int key="relation">0</int>
-								<reference key="secondItem" ref="325280486"/>
-								<int key="secondAttribute">3</int>
-								<float key="multiplier">1</float>
-								<object class="IBLayoutConstant" key="constant">
-									<double key="value">0.0</double>
-								</object>
-								<float key="priority">1000</float>
-								<reference key="containingView" ref="325280486"/>
-								<int key="scoringType">8</int>
-								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
 						</array>
@@ -3888,20 +3907,9 @@
 						<reference key="parent" ref="844277852"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">656</int>
-						<reference key="object" ref="355559523"/>
-						<reference key="parent" ref="325280486"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">679</int>
 						<reference key="object" ref="199183612"/>
 						<reference key="parent" ref="1022079067"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">697</int>
-						<reference key="object" ref="711164544"/>
-						<reference key="parent" ref="0"/>
-						<string key="objectName">Status Bar Controller</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">705</int>
@@ -4314,6 +4322,23 @@
 						<reference key="object" ref="718951431"/>
 						<reference key="parent" ref="180086057"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">798</int>
+						<reference key="object" ref="734361697"/>
+						<reference key="parent" ref="325280486"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">799</int>
+						<reference key="object" ref="978110300"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">ControllerStatus</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">806</int>
+						<reference key="object" ref="138247745"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">IconStatus</string>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -4471,8 +4496,8 @@
 				</array>
 				<string key="536.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<array class="NSMutableArray" key="537.IBNSViewMetadataConstraints">
-					<reference ref="355559523"/>
 					<reference ref="314512061"/>
+					<reference ref="734361697"/>
 				</array>
 				<string key="537.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<array class="NSMutableArray" key="552.IBNSViewMetadataConstraints">
@@ -4521,9 +4546,7 @@
 				<string key="646.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="647.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="652.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="656.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="679.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="697.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="705.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="707.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="709.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4596,6 +4619,9 @@
 				<string key="791.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="792.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="793.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="798.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="799.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="806.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="82.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="83.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -4605,7 +4631,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">795</int>
+			<int key="maxID">812</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

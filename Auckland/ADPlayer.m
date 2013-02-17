@@ -1,14 +1,15 @@
 //
-//  PBPlayer.m
-//  PlayBar
+//  ADPlayer.m
+//  Auckland
 //
-//  Created by Ryan Petrich on 11-11-23.
-//  Copyright (c) 2011 Ryan Petrich. All rights reserved.
+//  Created by Dat Anh Truong on 2/17/13.
+//  Copyright (c) 2013 Dat Anh Truong. All rights reserved.
 //
 
-#import "PBPlayer.h"
+#import "ADPlayer.h"
 
-@interface PBPlayer ()
+
+@interface ADPlayer ()
 - (id)initWithBundleIdentifier:(NSString *)bundleIdentifier;
 
 @property NSString *bundleIdentifier;
@@ -26,7 +27,7 @@
 @property NSRunningApplication *runningApplication;
 @end
 
-@implementation PBPlayer
+@implementation ADPlayer
 
 + (id)playerWithBundleIdentifier:(NSString *)bundleIdentifier
 {
@@ -63,6 +64,18 @@
     }
 }
 
+- (NSString *) appName
+{
+    NSRunningApplication *app = [self application];
+    if (app) {
+        NSString *name = [app localizedName];
+        return name;
+    } else {
+        return nil;
+    }
+    
+}
+
 - (NSString *)currentTitle
 {
     NSRunningApplication *app = [self application];
@@ -85,13 +98,20 @@
     if (app) {
         if (!_playingScript) {
             NSString *name = [app localizedName];
-            NSString *script = [NSString stringWithFormat:@"tell application  \"%@\" if player state is playing then return 1 else return 0 end if end tell", name];
+            NSString *script = [NSString stringWithFormat:@"tell app  \"%@\" to return player state", name];
             _playingScript = [[NSAppleScript alloc] initWithSource:script];
             [_playingScript compileAndReturnError:NULL];
         }
-        return [[_playingScript executeAndReturnError:NULL] booleanValue];
+        NSString *result =  [[_playingScript executeAndReturnError:NULL] stringValue];
+        if ([result isEqualToString:@"kPSP"]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    }else {
+        return nil;
     }
-    return NO;
+    
 }
 
 - (NSString *)name
@@ -191,6 +211,4 @@
         return NO;
     }
 }
-
-
 @end

@@ -5,7 +5,7 @@
 //  Created by Dat Anh Truong on 1/28/13.
 //  Copyright (c) 2013 Dat Anh Truong. All rights reserved.
 //
-
+/*
 
 #import "StatusBarController.h"
 #import "StatusView.h"
@@ -61,23 +61,24 @@ NSString* kTrackerKey = @"keyOfTracker";
 - (IBAction)playPrevious:(id)sender
 {
 //	[[iTunesController sharedInstance] playPrevious];
-    for (PBPlayer *player in _players) {
-        if ([player previousTrack]) {
+//    for (PBPlayer *player in _players) {
+        if ([_currentPlayer previousTrack]) {
             [self updateTitle];
-            break;
+//            break;
         }
-    }
+//    }
 }
 
 
 - (IBAction)playPause:(id)sender
 {
 //	[[iTunesController sharedInstance] playPause];
-    
-    for (PBPlayer *player in _players) {
-        if ([player togglePlaying])
-            break;
-    }
+//    
+//    for (PBPlayer *player in _players) {
+        if ([_currentPlayer togglePlaying])
+            [self updatePlayButtonState];
+//            break;
+//    }
 }
 
 
@@ -113,34 +114,20 @@ NSString* kTrackerKey = @"keyOfTracker";
         [self addTrackArea:titleTrackingArea withValue:title withKey:kTrackerKey toView:self.titleView];
         
         
-        _spotifyPlayer = [PBPlayer playerWithBundleIdentifier:@"com.spotify.client"];
-        _rdioPlayer = [PBPlayer playerWithBundleIdentifier:@"com.rdio.desktop"];
-        _iTunesPlayer = [PBPlayer playerWithBundleIdentifier:@"com.apple.iTunes"];
-        
         _players = [[NSArray alloc] initWithObjects:
                    [PBPlayer playerWithBundleIdentifier:@"com.spotify.client"],
                    [PBPlayer playerWithBundleIdentifier:@"com.rdio.desktop"],
                    [PBPlayer playerWithBundleIdentifier:@"com.apple.iTunes"],
                    nil];
         
-        for (NSInteger i = 0; i < [_players count]; i++) {
-            if ([[_players objectAtIndex:i] isRunning]) {
-                _currentPlayer = [_players objectAtIndex:i];
-                NSLog(@"index of player is %ld", i);
-            }
-        }
-        [_currentPlayer isPlaying]? NSLog(@"Auckland_Pause") : NSLog(@"Auckland_Play");
+        [self updateCurrentPlayer];
+        
         
         [self updateTitle]; 
         [[NSRunLoop currentRunLoop] addTimer:[NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTitle) userInfo:nil repeats:YES] forMode:NSRunLoopCommonModes];
-        
+        [[NSRunLoop currentRunLoop] addTimer:[NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateCurrentPlayer) userInfo:nil repeats:YES] forMode:NSRunLoopCommonModes];
         
 
-        
-        // Start listening to iTunes notifications
-        NSDistributedNotificationCenter *dnc = [NSDistributedNotificationCenter defaultCenter];
-        [dnc addObserver:self selector:@selector(updateTitle) name:@"com.apple.iTunes.playerInfo" object:nil];
-        
         
 		[controllerItem setView:self.titleView];
 		[self updatePlayButtonState];
@@ -212,9 +199,11 @@ NSString* kTrackerKey = @"keyOfTracker";
 
 - (void)updatePlayButtonState
 {
-    NSLog(@"Updated ");
-	NSImage *playButtonImage = [NSImage imageNamed:[_currentPlayer isPlaying]? @"Auckland_Pause" : @"Auckland_Play"];
+	NSImage *playButtonImage = [NSImage imageNamed:[_currentPlayer isPlaying]?@"Auckland_Pause":@"Auckland_Play"];
+    NSImage *altButtonImage = [NSImage imageNamed:[_currentPlayer isPlaying]? @"Auckland_Pause_alt":@"Auckland_Play_alt"];
 	[self.playButton setImage:playButtonImage];
+    [self.playButton setAlternateImage:altButtonImage];
+    NSLog(@"updated");
 }
 
 - (void)addTrackArea:(NSTrackingArea*) trackArea withValue:(int) trackValue withKey:(NSString*) trackKey toView: (StatusView*) desView
@@ -235,11 +224,22 @@ NSString* kTrackerKey = @"keyOfTracker";
     for (PBPlayer *player in _players) {
         NSString *currentTitle = player.currentTitle;
         if ([currentTitle length]) {
+            [_displayText setAlignment:NSLeftTextAlignment];
             [_displayText setStringValue:currentTitle];
             return;
         }
     }
-    [_displayText setStringValue:@"No Song"];
+    [_displayText setStringValue:@""];
+    [_displayText setAlignment:NSCenterTextAlignment];
+}
+
+- (void) updateCurrentPlayer{
+    for (PBPlayer *player in _players) {
+        if ([player isRunning]) {
+            _currentPlayer = player;
+            break;
+        }
+    }
 }
 
 
@@ -250,3 +250,4 @@ NSString* kTrackerKey = @"keyOfTracker";
 
 
 @end
+*/

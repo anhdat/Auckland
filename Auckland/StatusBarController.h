@@ -7,7 +7,7 @@
 //
 
 
-
+/*
 #import <Foundation/Foundation.h>
 #import "PBPlayer.h"
 
@@ -24,10 +24,6 @@
     
 }
 @property (nonatomic, strong) PBPlayer *currentPlayer;
-@property (nonatomic, strong) PBPlayer *iTunesPlayer;
-@property (nonatomic, strong) PBPlayer *spotifyPlayer;
-@property (nonatomic, strong) PBPlayer *rdioPlayer;
-
 @property (nonatomic, weak) IBOutlet NSButton *playButton;
 @property (nonatomic, weak) IBOutlet StatusView *statusView;
 @property (nonatomic, weak) IBOutlet StatusView *titleView;
@@ -43,5 +39,5 @@
 - (void)addStatusItems;
 - (void)updatePlayButtonState;
 
-
 @end
+ */
