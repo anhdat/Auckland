@@ -36,6 +36,10 @@
 //    [_iconS addIconItem];
     [_controllerS addAController];
     
+    [self updateCurrentPlayer];
+    [self updateTitle];
+    [self updatePlayButtonState];
+    
     [[NSRunLoop currentRunLoop] addTimer:[NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTitle) userInfo:nil repeats:YES] forMode:NSRunLoopCommonModes];
     [[NSRunLoop currentRunLoop] addTimer:[NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateCurrentPlayer) userInfo:nil repeats:YES] forMode:NSRunLoopCommonModes];
     

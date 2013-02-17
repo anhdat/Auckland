@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "StatusView.h"
 @interface IconStatusBar : NSObject <NSMenuDelegate>
+
 @property (nonatomic, strong) NSStatusItem *mainItem;
 - (void)addIconItem;
+
 @end

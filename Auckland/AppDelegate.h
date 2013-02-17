@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "ControllerStatusBar.h"
 #import "IconStatusBar.h"
+#import "ChangerStatusBar.h"
 #include "ADPlayer.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
@@ -17,6 +18,7 @@
 
 @property (weak) IBOutlet ControllerStatusBar *controllerS;
 @property (weak) IBOutlet IconStatusBar *iconS;
+
 
 @property (nonatomic, strong) ADPlayer *currentPlayer;
 - (IBAction)playPrevious:(id)sender;
