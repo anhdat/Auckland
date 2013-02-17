@@ -8,10 +8,21 @@
 
 
 #import "StatusBarController.h"
-#import "iTunesController.h"
 #import "StatusView.h"
 
+#import "PBPlayer.h"
+#import <ApplicationServices/ApplicationServices.h>
+
+
+#define kCSViewSideMargin           5
+#define kCSViewPauseIconOffset      13
+#define kCSViewScrollPadding        20
+#define kCSViewScrollDelayInSeconds 3
+#define kCSViewScrollTimerFrequency (1.0/30.0)
+#define kCSViewScrollStartOffset    (-kCSViewScrollDelayInSeconds/kCSViewScrollTimerFrequency)
+
 @interface StatusBarController()
+@property NSArray *players;
 @end
 
 @implementation StatusBarController
@@ -49,19 +60,36 @@ NSString* kTrackerKey = @"keyOfTracker";
 
 - (IBAction)playPrevious:(id)sender
 {
-	[[iTunesController sharedInstance] playPrevious];
+//	[[iTunesController sharedInstance] playPrevious];
+    for (PBPlayer *player in _players) {
+        if ([player previousTrack]) {
+            [self updateTitle];
+            break;
+        }
+    }
 }
 
 
 - (IBAction)playPause:(id)sender
 {
-	[[iTunesController sharedInstance] playPause];
+//	[[iTunesController sharedInstance] playPause];
+    
+    for (PBPlayer *player in _players) {
+        if ([player togglePlaying])
+            break;
+    }
 }
 
 
 - (IBAction)playNext:(id)sender
 {
-	[[iTunesController sharedInstance] playNext];
+//	[[iTunesController sharedInstance] playNext];
+    for (PBPlayer *player in _players) {
+        if ([player nextTrack]) {
+            [self updateTitle];
+            break;
+        }
+    }
 }
 
 
@@ -85,6 +113,35 @@ NSString* kTrackerKey = @"keyOfTracker";
         [self addTrackArea:titleTrackingArea withValue:title withKey:kTrackerKey toView:self.titleView];
         
         
+        _spotifyPlayer = [PBPlayer playerWithBundleIdentifier:@"com.spotify.client"];
+        _rdioPlayer = [PBPlayer playerWithBundleIdentifier:@"com.rdio.desktop"];
+        _iTunesPlayer = [PBPlayer playerWithBundleIdentifier:@"com.apple.iTunes"];
+        
+        _players = [[NSArray alloc] initWithObjects:
+                   [PBPlayer playerWithBundleIdentifier:@"com.spotify.client"],
+                   [PBPlayer playerWithBundleIdentifier:@"com.rdio.desktop"],
+                   [PBPlayer playerWithBundleIdentifier:@"com.apple.iTunes"],
+                   nil];
+        
+        for (NSInteger i = 0; i < [_players count]; i++) {
+            if ([[_players objectAtIndex:i] isRunning]) {
+                _currentPlayer = [_players objectAtIndex:i];
+                NSLog(@"index of player is %ld", i);
+            }
+        }
+        [_currentPlayer isPlaying]? NSLog(@"Auckland_Pause") : NSLog(@"Auckland_Play");
+        
+        [self updateTitle]; 
+        [[NSRunLoop currentRunLoop] addTimer:[NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTitle) userInfo:nil repeats:YES] forMode:NSRunLoopCommonModes];
+        
+        
+
+        
+        // Start listening to iTunes notifications
+        NSDistributedNotificationCenter *dnc = [NSDistributedNotificationCenter defaultCenter];
+        [dnc addObserver:self selector:@selector(updateTitle) name:@"com.apple.iTunes.playerInfo" object:nil];
+        
+        
 		[controllerItem setView:self.titleView];
 		[self updatePlayButtonState];
 	}
@@ -101,18 +158,9 @@ NSString* kTrackerKey = @"keyOfTracker";
 		NSMenu *mainMenu = [[NSMenu alloc] init];
 		[mainMenu setAutoenablesItems:NO];
 		[mainMenu setDelegate:self];
-        //
-        //		NSMenuItem *theItem = [mainMenu addItemWithTitle:NSLocalizedString(@"Menu-item-about", nil)
-        //                                                  action:@selector(showAboutPanel)
-        //                                           keyEquivalent:@""];
-        //		[theItem setTarget:[NSApp delegate]];
-        //
-        //
-        //		theItem = [mainMenu addItemWithTitle:NSLocalizedString(@"Menu-item-preferences", nil)
-        //                                      action:@selector(showPreferencesWindow)
-        //                               keyEquivalent:@""];
-        //		[theItem setTarget:[NSApp delegate]];
 		
+        
+        //Add menu items
         NSMenuItem *theItem = [mainMenu addItemWithTitle:@"About"
                                                   action:@selector(showAboutPanel)
                                            keyEquivalent:@""];
@@ -164,7 +212,8 @@ NSString* kTrackerKey = @"keyOfTracker";
 
 - (void)updatePlayButtonState
 {
-	NSImage *playButtonImage = [NSImage imageNamed:[[iTunesController sharedInstance] isPlaying] ? @"Auckland_Pause" : @"Auckland_Play"];
+    NSLog(@"Updated ");
+	NSImage *playButtonImage = [NSImage imageNamed:[_currentPlayer isPlaying]? @"Auckland_Pause" : @"Auckland_Play"];
 	[self.playButton setImage:playButtonImage];
 }
 
@@ -178,6 +227,25 @@ NSString* kTrackerKey = @"keyOfTracker";
                  owner: self
                  userInfo: trackerData2];
     [desView addTrackingArea: trackArea];
+}
+
+
+- (void)updateTitle
+{
+    for (PBPlayer *player in _players) {
+        NSString *currentTitle = player.currentTitle;
+        if ([currentTitle length]) {
+            [_displayText setStringValue:currentTitle];
+            return;
+        }
+    }
+    [_displayText setStringValue:@"No Song"];
+}
+
+
+- (void)rightMouseDown:(NSEvent *)event
+{
+    
 }
 
 

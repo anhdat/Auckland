@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A247E6016BADFAB00D97EAF /* iTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A247E5F16BADFAB00D97EAF /* iTunesController.m */; };
 		1A2E8A9016BD7F700038043C /* Auckland_Pause_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8316BD7F700038043C /* Auckland_Pause_alt.png */; };
 		1A2E8A9116BD7F700038043C /* Auckland_Change_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8416BD7F700038043C /* Auckland_Change_alt.png */; };
 		1A2E8A9216BD7F700038043C /* Auckland_Love_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E8A8516BD7F700038043C /* Auckland_Love_alt.png */; };
@@ -30,12 +29,10 @@
 		1AF0861216B6B48600202C25 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0861016B6B48600202C25 /* Credits.rtf */; };
 		1AF0861516B6B48600202C25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF0861416B6B48600202C25 /* AppDelegate.m */; };
 		1AF0861816B6B48700202C25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0861616B6B48700202C25 /* MainMenu.xib */; };
+		DCD3D03E16C7EDA800F2DCBE /* PBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3D03D16C7EDA800F2DCBE /* PBPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A247E5D16BADFAB00D97EAF /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
-		1A247E5E16BADFAB00D97EAF /* iTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesController.h; sourceTree = "<group>"; };
-		1A247E5F16BADFAB00D97EAF /* iTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesController.m; sourceTree = "<group>"; };
 		1A2E8A8316BD7F700038043C /* Auckland_Pause_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Pause_alt.png; sourceTree = "<group>"; };
 		1A2E8A8416BD7F700038043C /* Auckland_Change_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Change_alt.png; sourceTree = "<group>"; };
 		1A2E8A8516BD7F700038043C /* Auckland_Love_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auckland_Love_alt.png; sourceTree = "<group>"; };
@@ -67,6 +64,8 @@
 		1AF0861316B6B48600202C25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AF0861416B6B48600202C25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AF0861716B6B48700202C25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DCD3D03C16C7EDA800F2DCBE /* PBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlayer.h; sourceTree = "<group>"; };
+		DCD3D03D16C7EDA800F2DCBE /* PBPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +104,8 @@
 		1A247E6116BADFB000D97EAF /* General */ = {
 			isa = PBXGroup;
 			children = (
-				1A247E5D16BADFAB00D97EAF /* iTunes.h */,
-				1A247E5E16BADFAB00D97EAF /* iTunesController.h */,
-				1A247E5F16BADFAB00D97EAF /* iTunesController.m */,
+				DCD3D03C16C7EDA800F2DCBE /* PBPlayer.h */,
+				DCD3D03D16C7EDA800F2DCBE /* PBPlayer.m */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -265,9 +263,9 @@
 			files = (
 				1AF0860E16B6B48600202C25 /* main.m in Sources */,
 				1AF0861516B6B48600202C25 /* AppDelegate.m in Sources */,
-				1A247E6016BADFAB00D97EAF /* iTunesController.m in Sources */,
 				1AE7D6A516BC1343003EB2C5 /* StatusBarController.m in Sources */,
 				1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */,
+				DCD3D03E16C7EDA800F2DCBE /* PBPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +356,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Auckland/Auckland-Prefix.pch";
 				INFOPLIST_FILE = "Auckland/Auckland-Info.plist";
@@ -370,6 +372,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Auckland/Auckland-Prefix.pch";
 				INFOPLIST_FILE = "Auckland/Auckland-Info.plist";

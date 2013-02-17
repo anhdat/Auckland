@@ -1,12 +1,10 @@
 //
-//  iTunesController.h
-//  MyTunesController
+//  Scribbler.h
+//  Scribbler
 //
-//  Created by Toomas Vahter on 27.07.10.
-//  Copyright (c) 2010 Toomas Vahter
+//  Created by Matt Patenaude on 11/5/09.
+//  Copyright (C) 2009 {13bold}.
 //
-//  This content is released under the MIT License (http://www.opensource.org/licenses/mit-license.php).
-//  
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
@@ -24,36 +22,9 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
+//
 
 #import <Foundation/Foundation.h>
-#import "iTunes.h"
-
-#define STATE_PREVIOUS	@"STATE_PREVIOUS"
-#define STATE_CURRENT	@"STATE_CURRENT"
-
-@protocol iTunesControllerDelegate;
-
-@interface iTunesController : NSObject 
-{
-	iTunesApplication *iTunesApp;
-}
-
-@property (nonatomic, unsafe_unretained) id<iTunesControllerDelegate> delegate;
-@property (nonatomic, readonly) iTunesTrack *currentTrack;
-
-+ (iTunesController *)sharedInstance;
-
-// Searches playlists in the Library source.
-- (iTunesPlaylist *)playlistWithName:(NSString *)playlistName;
-
-- (BOOL)isPlaying;
-- (void)playPause;
-- (void)playPrevious;
-- (void)playNext;
-
-@end
-
-@protocol iTunesControllerDelegate <NSObject>
-- (void)iTunesController:(iTunesController *)tunesController trackDidChange:(iTunesTrack *)newTrack;
-@end
-
+#import "LFWebService.h"
+#import "LFWebServiceDelegate.h"
+#import "LFTrack.h"

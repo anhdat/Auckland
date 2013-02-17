@@ -9,21 +9,31 @@
 
 
 #import <Foundation/Foundation.h>
+#import "PBPlayer.h"
 
 @class StatusView;
 
 @interface StatusBarController : NSObject <NSMenuDelegate>
 {
-	NSStatusItem *mainItem, *controllerItem;
+	NSStatusItem *mainItem;
+    NSStatusItem *controllerItem;
 	NSMenuItem *progressMenuItem, *toggleFetchingMenuItem;
     NSTrackingAreaOptions trackingOptions;
     NSTrackingArea* controllerTrackingArea;
     NSTrackingArea* titleTrackingArea;
+    
 }
+@property (nonatomic, strong) PBPlayer *currentPlayer;
+@property (nonatomic, strong) PBPlayer *iTunesPlayer;
+@property (nonatomic, strong) PBPlayer *spotifyPlayer;
+@property (nonatomic, strong) PBPlayer *rdioPlayer;
 
 @property (nonatomic, weak) IBOutlet NSButton *playButton;
 @property (nonatomic, weak) IBOutlet StatusView *statusView;
 @property (nonatomic, weak) IBOutlet StatusView *titleView;
+
+@property (weak) IBOutlet NSTextFieldCell *displayText;
+@property (weak) IBOutlet NSTextField *displayTextView;
 
 
 - (IBAction)playPrevious:(id)sender;

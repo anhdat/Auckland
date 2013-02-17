@@ -7,10 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "iTunesController.h"
 #import "StatusBarController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate, iTunesControllerDelegate>
+
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 

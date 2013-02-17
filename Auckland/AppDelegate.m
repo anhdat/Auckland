@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-//#import "PreferencesWindowController.h"
 #import "StatusView.h"
 #import "StatusBarController.h"
 
@@ -29,33 +28,10 @@
 
     
     srand((unsigned int)time(NULL));
-    
-	[[iTunesController sharedInstance] setDelegate:self];
-	
-	[self.statusBarController addStatusItems];
+    [self.statusBarController addStatusItems];
 
 }
 
-
-#pragma mark -
-#pragma mark iTunesController Delegate
-
-- (void)iTunesController:(iTunesController *)tunesController trackDidChange:(iTunesTrack *)newTrack
-{
-	[self.statusBarController updatePlayButtonState];
-	
-    // Do not show notification window
-	if (newTrack == nil)
-		return;
-	
-	if ([[iTunesController sharedInstance] isPlaying])
-	{
-		
-	}
-	else
-	{
-	}
-}
 
 
 
