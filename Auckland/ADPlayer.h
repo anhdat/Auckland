@@ -15,6 +15,7 @@
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *artist;
 @property (nonatomic, readonly) NSString *album;
+@property (nonatomic, readonly) NSInteger *volume;
 
 @property (nonatomic, readonly) BOOL isRunning;
 @property (nonatomic, readonly) BOOL isPlaying;
@@ -23,5 +24,7 @@
 - (BOOL)togglePlaying;
 - (BOOL)nextTrack;
 - (BOOL)previousTrack;
+- (BOOL)volumeUp;
+- (BOOL)volumeDown;
 
 @end

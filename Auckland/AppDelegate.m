@@ -14,6 +14,7 @@
 @interface AppDelegate()
 
 @property NSArray *players;
+@property NSInteger arguSpo;
 @end
 
 
@@ -24,7 +25,7 @@
     // Insert code here to initialize your application
     
     //hide dock icon
-//    [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
+    //    [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
     [NSApp setActivationPolicy: NSApplicationActivationPolicyProhibited];
     _players = [[NSArray alloc] initWithObjects:
                 [ADPlayer playerWithBundleIdentifier:@"com.spotify.client"],
@@ -33,8 +34,12 @@
                 nil];
     
     srand((unsigned int)time(NULL));
-//    [_iconS addIconItem];
+    _arguSpo = 0;
+    
+    
+    [_changerS addChangeItem];
     [_controllerS addAController];
+    [_iconS addIconItem];
     
     [self updateCurrentPlayer];
     [self updateTitle];
@@ -86,7 +91,18 @@
 	[NSApp orderFrontStandardAboutPanel:self];
 	[NSApp activateIgnoringOtherApps:YES];
 }
-
+- (void)chooseiTunes
+{
+	NSLog(@"iTunes");
+}
+- (void)chooseSpotify
+{
+	NSLog(@"Spotify");
+}
+- (void)chooseRdio
+{
+	NSLog(@"Rdio");
+}
 - (IBAction)playPrevious:(id)sender {
     if ([_currentPlayer previousTrack]) {
         [self updateTitle];
@@ -104,4 +120,17 @@
         [self updateTitle];
     }
 }
+
+- (IBAction)star:(id)sender {
+}
+
+- (IBAction)volUp:(id)sender{
+    [_currentPlayer volumeUp];
+}
+
+
+- (IBAction)volDown:(id)sender{
+    [_currentPlayer volumeDown];
+}
+
 @end

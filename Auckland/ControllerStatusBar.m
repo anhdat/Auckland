@@ -38,6 +38,7 @@
         [self addTrackArea:_titleTrackingArea withValue:2 withKey:@"keyOfTracker" toView:self.titleView];
 
 		[_controllerItem setView:self.titleView];
+//        [self.actionView setAlphaValue:0.0];
     }
 }
 
@@ -64,7 +65,9 @@
 {
     //    NSLog(@"userData %@", [event userData]);
     //	NSLog(@"in");
+    [self.titleView setAlphaValue:0.0];
     [_controllerItem setView:self.actionView];
+    [self.actionView setAlphaValue:1.0];
 }
 
 // -------------------------------------------------------------------------------
@@ -77,6 +80,11 @@
 {
     //    NSLog(@"userData %@", [event userData]);
     //	NSLog(@"out");
+    [[self.titleView animator] setAlphaValue:1.0];
+    [[self.actionView animator] setAlphaValue:0.0];
     [_controllerItem setView:self.titleView];
+    
 }
+
+
 @end

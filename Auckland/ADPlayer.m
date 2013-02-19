@@ -19,10 +19,13 @@
 @property NSAppleScript *toggleScript;
 @property NSAppleScript *nextScript;
 @property NSAppleScript *previousScript;
+@property NSAppleScript *volUpScript;
+@property NSAppleScript *volDownScript;
 
 @property NSAppleScript *nameScript;
 @property NSAppleScript *albumScript;
 @property NSAppleScript *artistScript;
+@property NSAppleScript *volumeScript;
 
 @property NSRunningApplication *runningApplication;
 @end
@@ -82,7 +85,7 @@
     if (app) {
         if (!_titleScript) {
             NSString *name = [app localizedName];
-            NSString *script = [NSString stringWithFormat:@"tell app \"%@\" to return artist of current track & \" - \" & name of current track", name];
+            NSString *script = [NSString stringWithFormat:@"tell app \"%@\" to return name of current track & \" - \" &  artist of current track", name];
             _titleScript = [[NSAppleScript alloc] initWithSource:script];
             [_titleScript compileAndReturnError:NULL];
         }
@@ -161,6 +164,22 @@
     }
 }
 
+- (NSInteger *)volume
+{
+    NSRunningApplication *app = [self application];
+    if (app) {
+        if (!_volDownScript) {
+            NSString *name = [app localizedName];
+            NSString *script = [NSString stringWithFormat:@"tell app \"%@\" to return sound volume", name];
+            _volDownScript = [[NSAppleScript alloc] initWithSource:script];
+            [_volDownScript compileAndReturnError:NULL];
+        }
+        return [[_volDownScript executeAndReturnError:NULL] int32Value];
+    } else {
+        return nil;
+    }
+}
+
 - (BOOL)togglePlaying
 {
     NSRunningApplication *app = [self application];
@@ -206,6 +225,45 @@
             [_previousScript compileAndReturnError:NULL];
         }
         [_previousScript executeAndReturnError:NULL];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)volumeUp
+{
+    NSRunningApplication *app = [self application];
+    if (app) {
+        if (!_volUpScript) {
+            NSInteger vol = [self volume];
+            vol +=10;
+            
+            NSString *name = [app localizedName];
+            NSString *script = [NSString stringWithFormat:@"tell app \"%@\" to set sound volume to %ld", name, vol];
+            _volUpScript = [[NSAppleScript alloc] initWithSource:script];
+            [_volUpScript compileAndReturnError:NULL];
+        }
+        [_volUpScript executeAndReturnError:NULL];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (BOOL)volumeDown
+{
+    NSRunningApplication *app = [self application];
+    if (app) {
+        if (!_volDownScript) {NSInteger vol = [self volume];
+            vol -=10;
+            
+            NSString *name = [app localizedName];
+            NSString *script = [NSString stringWithFormat:@"tell app \"%@\" to set sound volume to %ld", name, vol];
+            _volDownScript = [[NSAppleScript alloc] initWithSource:script];
+            [_volDownScript compileAndReturnError:NULL];
+        }
+        [_volDownScript executeAndReturnError:NULL];
         return YES;
     } else {
         return NO;

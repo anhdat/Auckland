@@ -24,7 +24,6 @@
 		1A9338A916D1376F00D93204 /* ControllerStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338A816D1376F00D93204 /* ControllerStatusBar.m */; };
 		1A9338AC16D13B7100D93204 /* IconStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338AB16D13B7100D93204 /* IconStatusBar.m */; };
 		1A9338B216D14A0500D93204 /* ChangerStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338B116D14A0500D93204 /* ChangerStatusBar.m */; };
-		1AE7D6A516BC1343003EB2C5 /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */; };
 		1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A916BC1626003EB2C5 /* StatusView.m */; };
 		1AE7D6AC16BC168E003EB2C5 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */; };
 		1AF0860216B6B48600202C25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF0860116B6B48600202C25 /* Cocoa.framework */; };
@@ -57,8 +56,6 @@
 		1A9338AB16D13B7100D93204 /* IconStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconStatusBar.m; sourceTree = "<group>"; };
 		1A9338B016D14A0500D93204 /* ChangerStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangerStatusBar.h; sourceTree = "<group>"; };
 		1A9338B116D14A0500D93204 /* ChangerStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangerStatusBar.m; sourceTree = "<group>"; };
-		1AE7D6A316BC1343003EB2C5 /* StatusBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
-		1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
 		1AE7D6A816BC1626003EB2C5 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
 		1AE7D6A916BC1626003EB2C5 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
 		1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
@@ -122,8 +119,6 @@
 		1AE7D6A716BC1348003EB2C5 /* Status Item */ = {
 			isa = PBXGroup;
 			children = (
-				1AE7D6A316BC1343003EB2C5 /* StatusBarController.h */,
-				1AE7D6A416BC1343003EB2C5 /* StatusBarController.m */,
 				1AE7D6A816BC1626003EB2C5 /* StatusView.h */,
 				1AE7D6A916BC1626003EB2C5 /* StatusView.m */,
 				1A9338A716D1376F00D93204 /* ControllerStatusBar.h */,
@@ -278,7 +273,6 @@
 			files = (
 				1AF0860E16B6B48600202C25 /* main.m in Sources */,
 				1AF0861516B6B48600202C25 /* AppDelegate.m in Sources */,
-				1AE7D6A516BC1343003EB2C5 /* StatusBarController.m in Sources */,
 				1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */,
 				1A9338A616D1360700D93204 /* ADPlayer.m in Sources */,
 				1A9338A916D1376F00D93204 /* ControllerStatusBar.m in Sources */,

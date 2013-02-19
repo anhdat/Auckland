@@ -17,7 +17,6 @@
         //        [statusIcon setSize:imageSize];
         _changeItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
         [_changeItem setImage:statusIcon];
-        [_changeItem setHighlightMode:YES];
         
         NSMenu *mainMenu = [[NSMenu alloc] init];
         [mainMenu setAutoenablesItems:NO];
@@ -25,25 +24,18 @@
         
         
         //Add menu items
-        NSMenuItem *theItem = [mainMenu addItemWithTitle:@"About"
-                                                  action:@selector(showAboutPanel)
+        NSMenuItem *theItem = [mainMenu addItemWithTitle:@"iTunes"
+                                                  action:@selector(chooseiTunes)
                                            keyEquivalent:@""];
         [theItem setTarget:[NSApp delegate]];
-        
-        
-        [mainMenu addItem:[NSMenuItem separatorItem]];
-        theItem = [mainMenu addItemWithTitle:@"Preferences"
-                                      action:@selector(showPreferences)
-                               keyEquivalent:@","];
+        theItem = [mainMenu addItemWithTitle:@"Spotify"
+                                      action:@selector(chooseSpotify)
+                               keyEquivalent:@""];
         [theItem setTarget:[NSApp delegate]];
-        
-        [mainMenu addItem:[NSMenuItem separatorItem]];
-        
-        theItem = [mainMenu addItemWithTitle:@"Quit"
-                                      action:@selector(terminate:)
-                               keyEquivalent:@"Q"];
-        [theItem setTarget:NSApp];
-        
+        theItem = [mainMenu addItemWithTitle:@"Rdio"
+                                      action:@selector(chooseRdio)
+                               keyEquivalent:@""];
+        [theItem setTarget:[NSApp delegate]];
         [_changeItem setMenu:mainMenu];
         
     }
