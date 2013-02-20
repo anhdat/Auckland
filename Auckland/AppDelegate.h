@@ -12,15 +12,18 @@
 #import "ChangerStatusBar.h"
 #import "ADPlayer.h"
 #import "StatusView.h"
+#import "MenubarController.h"
+#import "PanelController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate, PanelControllerDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 
 @property (weak) IBOutlet ControllerStatusBar *controllerS;
 @property (weak) IBOutlet IconStatusBar *iconS;
 @property (weak) IBOutlet ChangerStatusBar *changerS;
-
+@property (nonatomic, strong) MenubarController *menubarController;
+@property (nonatomic, strong, readonly) PanelController *panelController;
 
 @property (nonatomic, strong) ADPlayer *currentPlayer;
 - (IBAction)playPrevious:(id)sender;
@@ -39,6 +42,8 @@
 
 
 
+
+- (IBAction)togglePanel:(id)sender;
 
 
 

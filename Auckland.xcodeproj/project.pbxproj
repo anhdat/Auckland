@@ -24,6 +24,12 @@
 		1A9338A916D1376F00D93204 /* ControllerStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338A816D1376F00D93204 /* ControllerStatusBar.m */; };
 		1A9338AC16D13B7100D93204 /* IconStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338AB16D13B7100D93204 /* IconStatusBar.m */; };
 		1A9338B216D14A0500D93204 /* ChangerStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338B116D14A0500D93204 /* ChangerStatusBar.m */; };
+		1ADAAC9816D532FC00ADA13A /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAAC9516D532FC00ADA13A /* MenubarController.m */; };
+		1ADAAC9916D532FC00ADA13A /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAAC9716D532FC00ADA13A /* PanelController.m */; };
+		1ADAACA016D5330900ADA13A /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAAC9B16D5330900ADA13A /* Panel.m */; };
+		1ADAACA116D5330900ADA13A /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAAC9D16D5330900ADA13A /* StatusItemView.m */; };
+		1ADAACA216D5330900ADA13A /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAAC9F16D5330900ADA13A /* BackgroundView.m */; };
+		1ADAACA416D5332200ADA13A /* Panel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADAACA316D5332200ADA13A /* Panel.xib */; };
 		1AE7D6AA16BC1626003EB2C5 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7D6A916BC1626003EB2C5 /* StatusView.m */; };
 		1AE7D6AC16BC168E003EB2C5 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */; };
 		1AF0860216B6B48600202C25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF0860116B6B48600202C25 /* Cocoa.framework */; };
@@ -56,6 +62,17 @@
 		1A9338AB16D13B7100D93204 /* IconStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconStatusBar.m; sourceTree = "<group>"; };
 		1A9338B016D14A0500D93204 /* ChangerStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangerStatusBar.h; sourceTree = "<group>"; };
 		1A9338B116D14A0500D93204 /* ChangerStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangerStatusBar.m; sourceTree = "<group>"; };
+		1ADAAC9416D532FC00ADA13A /* MenubarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenubarController.h; sourceTree = "<group>"; };
+		1ADAAC9516D532FC00ADA13A /* MenubarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenubarController.m; sourceTree = "<group>"; };
+		1ADAAC9616D532FC00ADA13A /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelController.h; sourceTree = "<group>"; };
+		1ADAAC9716D532FC00ADA13A /* PanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelController.m; sourceTree = "<group>"; };
+		1ADAAC9A16D5330900ADA13A /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
+		1ADAAC9B16D5330900ADA13A /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
+		1ADAAC9C16D5330900ADA13A /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
+		1ADAAC9D16D5330900ADA13A /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
+		1ADAAC9E16D5330900ADA13A /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		1ADAAC9F16D5330900ADA13A /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		1ADAACA316D5332200ADA13A /* Panel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Panel.xib; sourceTree = "<group>"; };
 		1AE7D6A816BC1626003EB2C5 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
 		1AE7D6A916BC1626003EB2C5 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
 		1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
@@ -116,9 +133,27 @@
 			name = General;
 			sourceTree = "<group>";
 		};
+		1ADAAC9316D532E400ADA13A /* IconPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				1ADAAC9416D532FC00ADA13A /* MenubarController.h */,
+				1ADAAC9516D532FC00ADA13A /* MenubarController.m */,
+				1ADAAC9616D532FC00ADA13A /* PanelController.h */,
+				1ADAAC9716D532FC00ADA13A /* PanelController.m */,
+				1ADAAC9A16D5330900ADA13A /* Panel.h */,
+				1ADAAC9B16D5330900ADA13A /* Panel.m */,
+				1ADAAC9C16D5330900ADA13A /* StatusItemView.h */,
+				1ADAAC9D16D5330900ADA13A /* StatusItemView.m */,
+				1ADAAC9E16D5330900ADA13A /* BackgroundView.h */,
+				1ADAAC9F16D5330900ADA13A /* BackgroundView.m */,
+			);
+			name = IconPopUp;
+			sourceTree = "<group>";
+		};
 		1AE7D6A716BC1348003EB2C5 /* Status Item */ = {
 			isa = PBXGroup;
 			children = (
+				1ADAAC9316D532E400ADA13A /* IconPopUp */,
 				1AE7D6A816BC1626003EB2C5 /* StatusView.h */,
 				1AE7D6A916BC1626003EB2C5 /* StatusView.m */,
 				1A9338A716D1376F00D93204 /* ControllerStatusBar.h */,
@@ -173,6 +208,7 @@
 			children = (
 				1AF0861316B6B48600202C25 /* AppDelegate.h */,
 				1AF0861416B6B48600202C25 /* AppDelegate.m */,
+				1ADAACA316D5332200ADA13A /* Panel.xib */,
 				1AF0861616B6B48700202C25 /* MainMenu.xib */,
 				1AE7D6A716BC1348003EB2C5 /* Status Item */,
 				1A247E6116BADFB000D97EAF /* General */,
@@ -261,6 +297,7 @@
 				1A2E8A9A16BD7F700038043C /* Auckland_Next.png in Resources */,
 				1A2E8A9B16BD7F700038043C /* Auckland_Pause.png in Resources */,
 				1A2E8A9C16BD7F700038043C /* Auckland_Logo.png in Resources */,
+				1ADAACA416D5332200ADA13A /* Panel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +315,11 @@
 				1A9338A916D1376F00D93204 /* ControllerStatusBar.m in Sources */,
 				1A9338AC16D13B7100D93204 /* IconStatusBar.m in Sources */,
 				1A9338B216D14A0500D93204 /* ChangerStatusBar.m in Sources */,
+				1ADAAC9816D532FC00ADA13A /* MenubarController.m in Sources */,
+				1ADAAC9916D532FC00ADA13A /* PanelController.m in Sources */,
+				1ADAACA016D5330900ADA13A /* Panel.m in Sources */,
+				1ADAACA116D5330900ADA13A /* StatusItemView.m in Sources */,
+				1ADAACA216D5330900ADA13A /* BackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

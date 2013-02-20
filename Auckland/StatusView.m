@@ -50,6 +50,7 @@
 
 - (void)scrollWheel:(NSEvent *)theEvent{
     if ([theEvent deltaY] < 0) {
+        
         [self volUp];
     }
     if ([theEvent deltaY] > 0) {
