@@ -32,7 +32,6 @@
         [theItem setTarget:[NSApp delegate]];
         
         
-        
         [mainMenu addItem:[NSMenuItem separatorItem]];
         theItem = [mainMenu addItemWithTitle:@"Preferences"
                                       action:@selector(showPreferences)

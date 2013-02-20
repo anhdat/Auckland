@@ -8,12 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import <ScriptingBridge/ScriptingBridge.h>
-#import "iTunes.h"
-#import "Rdio.h"
-#import "Spotify.h"
-#import "Radium.h"
-
 @interface ADPlayer : NSObject
 + (id)playerWithBundleIdentifier:(NSString *)bundleIdentifier;
 
@@ -27,14 +21,6 @@
 @property (nonatomic, readonly) BOOL isPlaying;
 @property (nonatomic, readonly) NSString *appName;
 
-@property (nonatomic, strong) SBApplication *currentADPlayer;
-
-@property (nonatomic, strong)  iTunesApplication *iTunes;
-@property (nonatomic, strong) RdioApplication *Rdio;
-@property (nonatomic, strong) SpotifyApplication *Spotify;
-@property (nonatomic, strong) RadiumApplication *Radium;
-
-- (void) setUp;
 - (BOOL)togglePlaying;
 - (BOOL)nextTrack;
 - (BOOL)previousTrack;
