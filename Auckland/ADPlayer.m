@@ -27,6 +27,8 @@
 @property NSAppleScript *artistScript;
 @property NSAppleScript *volumeScript;
 
+
+
 @property NSRunningApplication *runningApplication;
 @end
 
@@ -44,8 +46,30 @@
     }
     return self;
 }
+- (id)init {
+    self = [super init];
+    if (self) {
+        // Initialize self.
+//        _Spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
+          NSLog(@"awake");
 
+    }
+    return self;
+}
 
+-(void)setUp{
+    NSLog(@"awake");
+
+}
+-(void)awakeFromNib {
+    
+	// Give us features we need that EyeTunes doesn't
+	_iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    _Rdio = [SBApplication applicationWithBundleIdentifier:@"com.rdio.desktop"];
+    _Spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
+    _Radium = [SBApplication applicationWithBundleIdentifier:@"com.catpigstudios.Radium"];
+  
+}
 - (NSRunningApplication *)application
 {
     if (_runningApplication.terminated) {
@@ -81,18 +105,17 @@
 
 - (NSString *)currentTitle
 {
-    NSRunningApplication *app = [self application];
-    if (app) {
-        if (!_titleScript) {
-            NSString *name = [app localizedName];
-            NSString *script = [NSString stringWithFormat:@"tell app \"%@\" to return name of current track & \" - \" &  artist of current track", name];
-            _titleScript = [[NSAppleScript alloc] initWithSource:script];
-            [_titleScript compileAndReturnError:NULL];
-        }
-        return [[_titleScript executeAndReturnError:NULL] stringValue];
-    } else {
-        return nil;
-    }
+//    NSRunningApplication *app = [self application];
+//    if (app) {
+//        [self setUp];
+//        SpotifyTrack *track = [_Spotify currentTrack];
+//        return [track name];
+//    } else {
+//        return nil;
+//    }
+//    _Spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
+    SpotifyTrack *track = [_Spotify currentTrack];
+       return [track name];
 }
 
 - (BOOL) isPlaying

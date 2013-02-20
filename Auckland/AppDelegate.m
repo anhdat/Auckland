@@ -32,23 +32,32 @@
                 [ADPlayer playerWithBundleIdentifier:@"com.rdio.desktop"],
                 [ADPlayer playerWithBundleIdentifier:@"com.apple.iTunes"],
                 nil];
+    [_currentPlayer setUp];
+//    [_currentPlayer setITunes:[SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"]];
+//    [_currentPlayer setRdio:[SBApplication applicationWithBundleIdentifier:@"com.rdio.desktop"]];
     
+//    [_currentPlayer setRadium:[SBApplication applicationWithBundleIdentifier:@"com.catpigstudios.Radium"]];
+    _currentPlayer =[_currentPlayer init];
     srand((unsigned int)time(NULL));
     _arguSpo = 0;
-    
     
     [_changerS addChangeItem];
     [_controllerS addAController];
     [_iconS addIconItem];
     
-    [self updateCurrentPlayer];
+//    [self updateCurrentPlayer];
     [self updateTitle];
     [self updatePlayButtonState];
     
     [[NSRunLoop currentRunLoop] addTimer:[NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTitle) userInfo:nil repeats:YES] forMode:NSRunLoopCommonModes];
     [[NSRunLoop currentRunLoop] addTimer:[NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateCurrentPlayer) userInfo:nil repeats:YES] forMode:NSRunLoopCommonModes];
-    
+
 }
+
+
+#pragma mark -
+#pragma mark Udating Status Infor
+
 - (void) updateCurrentPlayer{
     for (ADPlayer *player in _players) {
         if ([player isRunning]) {
@@ -58,8 +67,6 @@
     }
 }
 
-#pragma mark -
-#pragma mark Udating Status Infor
 - (void)updatePlayButtonState
 {
 	NSImage *playButtonImage = [NSImage imageNamed:[_currentPlayer isPlaying]?@"Auckland_Pause":@"Auckland_Play"];
@@ -70,14 +77,36 @@
 
 - (void)updateTitle
 {
-    for (ADPlayer *player in _players) {
-        NSString *currentTitle = player.currentTitle;
-        if ([currentTitle length]) {
-            [_controllerS.displayText setAlignment:NSLeftTextAlignment];
-            [_controllerS.displayText setStringValue:currentTitle];
-            return;
-        }
+//    for (ADPlayer *player in _players) {
+//        NSLog(@"abc");
+//        NSString *currentTitle = player.currentTitle;
+//        NSLog(@"current title: %@", currentTitle);
+//        if ([currentTitle length]) {
+//            [_controllerS.displayText setAlignment:NSLeftTextAlignment];
+//            [_controllerS.displayText setStringValue:currentTitle];
+//            return;
+//        }
+//    }
+    [_currentPlayer setSpotify:[SBApplication applicationWithBundleIdentifier:@"com.spotify.client"]];
+    if ([_currentPlayer iTunes] != nil) {
+        NSLog(@"yes");
+    } else {
+        NSLog(@"no");
     }
+    if ([_currentPlayer Spotify] != nil) {
+        NSLog(@"yes");
+    } else {
+        NSLog(@"no");
+    }
+    NSString *currentTitle = _currentPlayer.currentTitle;
+    NSLog(@"current title: %@", currentTitle);
+    if ([currentTitle length]) {
+        [_controllerS.displayText setAlignment:NSLeftTextAlignment];
+        [_controllerS.displayText setStringValue:currentTitle];
+        return;
+    }
+
+    
     [_controllerS.displayText setStringValue:@""];
     [_controllerS.displayText setAlignment:NSCenterTextAlignment];
 }

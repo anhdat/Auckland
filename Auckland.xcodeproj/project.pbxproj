@@ -56,6 +56,10 @@
 		1A9338AB16D13B7100D93204 /* IconStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconStatusBar.m; sourceTree = "<group>"; };
 		1A9338B016D14A0500D93204 /* ChangerStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangerStatusBar.h; sourceTree = "<group>"; };
 		1A9338B116D14A0500D93204 /* ChangerStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangerStatusBar.m; sourceTree = "<group>"; };
+		1ADAAC8F16D513DA00ADA13A /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		1ADAAC9016D513DA00ADA13A /* Radium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radium.h; sourceTree = "<group>"; };
+		1ADAAC9116D513DA00ADA13A /* Rdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rdio.h; sourceTree = "<group>"; };
+		1ADAAC9216D513DA00ADA13A /* Spotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
 		1AE7D6A816BC1626003EB2C5 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
 		1AE7D6A916BC1626003EB2C5 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
 		1AE7D6AB16BC168E003EB2C5 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
@@ -114,6 +118,17 @@
 				1A9338A516D1360700D93204 /* ADPlayer.m */,
 			);
 			name = General;
+			sourceTree = "<group>";
+		};
+		1ADAAC8E16D5138D00ADA13A /* Scripting Bridges */ = {
+			isa = PBXGroup;
+			children = (
+				1ADAAC8F16D513DA00ADA13A /* iTunes.h */,
+				1ADAAC9016D513DA00ADA13A /* Radium.h */,
+				1ADAAC9116D513DA00ADA13A /* Rdio.h */,
+				1ADAAC9216D513DA00ADA13A /* Spotify.h */,
+			);
+			name = "Scripting Bridges";
 			sourceTree = "<group>";
 		};
 		1AE7D6A716BC1348003EB2C5 /* Status Item */ = {
@@ -175,6 +190,7 @@
 				1AF0861416B6B48600202C25 /* AppDelegate.m */,
 				1AF0861616B6B48700202C25 /* MainMenu.xib */,
 				1AE7D6A716BC1348003EB2C5 /* Status Item */,
+				1ADAAC8E16D5138D00ADA13A /* Scripting Bridges */,
 				1A247E6116BADFB000D97EAF /* General */,
 				1A247E5C16BADCCC00D97EAF /* Image */,
 				1AF0860816B6B48600202C25 /* Supporting Files */,
