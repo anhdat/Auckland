@@ -24,7 +24,6 @@
 		1A9338A916D1376F00D93204 /* ControllerStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338A816D1376F00D93204 /* ControllerStatusBar.m */; };
 		1A9338AC16D13B7100D93204 /* IconStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338AB16D13B7100D93204 /* IconStatusBar.m */; };
 		1A9338B216D14A0500D93204 /* ChangerStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9338B116D14A0500D93204 /* ChangerStatusBar.m */; };
-		1ACA7D521785339900541876 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1ACA7D511785339900541876 /* .travis.yml */; };
 		1ADAAC9816D532FC00ADA13A /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAAC9516D532FC00ADA13A /* MenubarController.m */; };
 		1ADAAC9916D532FC00ADA13A /* PanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAAC9716D532FC00ADA13A /* PanelController.m */; };
 		1ADAACA016D5330900ADA13A /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADAAC9B16D5330900ADA13A /* Panel.m */; };
@@ -63,7 +62,6 @@
 		1A9338AB16D13B7100D93204 /* IconStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconStatusBar.m; sourceTree = "<group>"; };
 		1A9338B016D14A0500D93204 /* ChangerStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangerStatusBar.h; sourceTree = "<group>"; };
 		1A9338B116D14A0500D93204 /* ChangerStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangerStatusBar.m; sourceTree = "<group>"; };
-		1ACA7D511785339900541876 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		1ADAAC9416D532FC00ADA13A /* MenubarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenubarController.h; sourceTree = "<group>"; };
 		1ADAAC9516D532FC00ADA13A /* MenubarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenubarController.m; sourceTree = "<group>"; };
 		1ADAAC9616D532FC00ADA13A /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelController.h; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 				1A247E6116BADFB000D97EAF /* General */,
 				1A247E5C16BADCCC00D97EAF /* Image */,
 				1AF0860816B6B48600202C25 /* Supporting Files */,
-				1ACA7D511785339900541876 /* .travis.yml */,
 			);
 			path = Auckland;
 			sourceTree = "<group>";
@@ -301,7 +298,6 @@
 				1A2E8A9B16BD7F700038043C /* Auckland_Pause.png in Resources */,
 				1A2E8A9C16BD7F700038043C /* Auckland_Logo.png in Resources */,
 				1ADAACA416D5332200ADA13A /* Panel.xib in Resources */,
-				1ACA7D521785339900541876 /* .travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
